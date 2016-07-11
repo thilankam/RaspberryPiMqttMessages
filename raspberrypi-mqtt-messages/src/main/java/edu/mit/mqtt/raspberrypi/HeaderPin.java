@@ -30,4 +30,11 @@ public class HeaderPin {
     return (number <= 0 || number > 40) || (property == null) || (value == null) || (raspberryPiModel == null)
         || (direction == null);
   }
+
+  @Override
+  public String toString() {
+    return "HeaderPin [number:" + number + ", property:" + property.toString() + ", value:" + value.toString()
+        + ", raspberryPiModel:" + raspberryPiModel.toString() + ", direction:" + direction.toString() + ", label: "
+        + label + "]";
+  }
 }

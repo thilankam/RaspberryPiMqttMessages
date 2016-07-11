@@ -9,7 +9,7 @@ package edu.mit.mqtt.raspberrypi.model.device;
  *
  */
 public enum PinProperty {
-  PIN_STATE("pinState");
+  PIN_STATE("pinState"), REGISTER("registerPin");
 
   private final String name;
 

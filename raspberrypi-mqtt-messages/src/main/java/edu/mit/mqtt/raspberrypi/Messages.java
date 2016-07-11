@@ -3,10 +3,6 @@ package edu.mit.mqtt.raspberrypi;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import edu.mit.mqtt.raspberrypi.model.device.PinProperty;
-import edu.mit.mqtt.raspberrypi.model.device.PinValue;
-import edu.mit.mqtt.raspberrypi.model.device.RaspberrryPiModel;
-
 /**
  * This static class holds the internal messages used in the communication
  * between the App Inventor components and the RaspberryPiAppInventor companion
@@ -18,6 +14,9 @@ import edu.mit.mqtt.raspberrypi.model.device.RaspberrryPiModel;
 public class Messages {
 
   private static Messages instance = null;
+
+  static GsonBuilder builder = new GsonBuilder();
+  static Gson gson = builder.create();
 
   protected Messages() {
     // Empty
@@ -31,9 +30,10 @@ public class Messages {
   }
 
   public static String constructPinMessage(HeaderPin myPin) {
-    GsonBuilder builder = new GsonBuilder();
-    Gson gson = builder.create();
     return gson.toJson(myPin);
   }
 
+  public static HeaderPin deconstrctPinMessage(String pMessage) {
+    return gson.fromJson(pMessage, HeaderPin.class);
+  }
 }
