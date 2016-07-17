@@ -26,6 +26,12 @@ public class HeaderPin {
 
   public String label = "default";
 
+  /**
+   * Validate the pin number. It cannot be less than 0 or greater than x, where
+   * x is either 26 or 40 depending on the model.
+   * TODO
+   * @return
+   */
   public boolean isInvalid() {
     return (number <= 0 || number > 40) || (property == null) || (value == null) || (raspberryPiModel == null)
         || (direction == null);
