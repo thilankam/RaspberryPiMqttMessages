@@ -9,7 +9,7 @@ package edu.mit.mqtt.raspberrypi.model.messaging;
  *
  */
 public enum Topic {
-  INTERNAL("_internalTopic:_");
+  INTERNAL("mit-appinventor/raspberrypi/internal/");
 
   private final String name;
 
