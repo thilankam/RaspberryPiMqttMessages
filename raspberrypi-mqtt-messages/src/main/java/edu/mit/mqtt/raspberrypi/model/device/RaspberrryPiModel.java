@@ -14,7 +14,7 @@ public enum RaspberrryPiModel {
    * Revision 2 includes an extended 8 pin P5 Pin Header.The default for
    * Raspberry Pi 1 Model B is the revision 1.
    */
-  Pi1A("Pi1A"), Pi1B("Pi1B"), Pi1Bv2("Pi1Bv2"), Pi1APlus("Pi1A+"), Pi1BPlus("Pi1B+"), Pi2B("Pi2B"), Pi3B("Pi3B");
+  Pi1A("Pi1A"), Pi1B("Pi1B"), Pi1Bv2("Pi1Bv2"), Pi1APlus("Pi1A+"), Pi1BPlus("Pi1B+"), Pi2B("Pi2B"), Pi3B("Pi3B"), Pi4B("Pi4B");
 
   private final String name;
 
